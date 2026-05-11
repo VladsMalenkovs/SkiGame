@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Vector3 pushBackForce;
     [SerializeField] private bool disabled = false;
     [SerializeField] private float disabledTime = 0.7f;
+    public static Transform playerPos;
     InputAction move;
     private Rigidbody rb;
     [SerializeField] private float lastDisableTime = 0.75f;  
@@ -18,7 +19,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         move = InputSystem.actions.FindAction("Player/move");
-        
+        playerPos = transform;
     }
 
     private void OnEnable()
