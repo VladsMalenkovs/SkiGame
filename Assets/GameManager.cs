@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
 
     }
 
-    private void Disable()
+    private void OnDisable()
     {
         StartGate.StartRace -= StartRace;
         EndGate.FinishRace -= FinishRace;
@@ -69,9 +69,11 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(racing)
-         raceTime = DateTime.Now - raceStart + penltyTime;
-        timerText.text = "TIME: " + raceTime.ToString("mm\\:ss");
+        if (racing)
+        {
+            raceTime = DateTime.Now - raceStart + penltyTime;
+            timerText.text = "TIME: " + raceTime.ToString("mm\\:ss");
+        }
         
         Debug.Log("RaceTime: " + raceTime.ToString("mm\\ss\\ff"));
     }

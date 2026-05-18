@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool disabled = false;
     [SerializeField] private float disabledTime = 0.7f;
     public static Transform playerPos;
+    private Animator anim;
     InputAction move;
     private Rigidbody rb;
     [SerializeField] private float lastDisableTime = 0.75f;  
@@ -20,6 +21,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         move = InputSystem.actions.FindAction("Player/move");
         playerPos = transform;
+        anim = GetComponent<Animator>();    
     }
 
     private void OnEnable()
@@ -50,7 +52,9 @@ public class PlayerController : MonoBehaviour
         transform.Rotate(0, moveVector.x * rotationSpeed * speedMultiplayer * Time.fixedDeltaTime, 0);
         }
 
-
+        anim.SetBool("grounded", isGrounded);
+        anim.SetFloat("playerSpeed", rb.linearVelocity.magnitude);
+        Debug.Log("Speed" + rb.linearVelocity.magnitude);
 
     }
 }
