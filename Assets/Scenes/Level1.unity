@@ -1165,6 +1165,23 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: def1b5a67cc195940922b5f6a9a5c9cf, type: 3}
+--- !u!1 &426969799 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6564981167525259486, guid: 49ee210ac0510844d8da858708681a45, type: 3}
+  m_PrefabInstance: {fileID: 2134873732}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &426969803
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426969799}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1001 &429022379
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8415,7 +8432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6564981167525259486, guid: 49ee210ac0510844d8da858708681a45, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6564981167606150083, guid: 49ee210ac0510844d8da858708681a45, type: 3}
       propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
@@ -8450,6 +8467,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6564981167228359830, guid: 49ee210ac0510844d8da858708681a45, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2134873735}
+    - targetCorrespondingSourceObject: {fileID: 6564981167525259486, guid: 49ee210ac0510844d8da858708681a45, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 426969803}
   m_SourcePrefab: {fileID: 100100000, guid: 49ee210ac0510844d8da858708681a45, type: 3}
 --- !u!1 &2134873733 stripped
 GameObject:
@@ -8473,7 +8493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 447e4b6d15387d841b454ea304dafb38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
-  overlay: {fileID: 0}
+  overlay: {fileID: 426969803}
   fadespeed: 0.5
   screen: {fileID: 2134873734}
   NextLevelIndex: 1

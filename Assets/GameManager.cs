@@ -73,6 +73,6 @@ public class GameManager : MonoBehaviour
          raceTime = DateTime.Now - raceStart + penltyTime;
         timerText.text = "TIME: " + raceTime.ToString("mm\\:ss");
         
-        Debug.Log("RaceTime: " + raceTime.ToString("mm:ss:ff"));
+        Debug.Log("RaceTime: " + raceTime.ToString("mm\\ss\\ff"));
     }
 }

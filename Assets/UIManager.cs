@@ -14,7 +14,7 @@ public class UIManager : MonoBehaviour
     {
         overlay.gameObject.SetActive(true);
         screen.SetActive(false);
-        StartCoroutine(FadeInOverlay());
+        StartCoroutine(FadeOutOverlay());
     }
 
     private void OnEnable()
