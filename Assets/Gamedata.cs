@@ -22,7 +22,7 @@ public class Gamedata : MonoBehaviour
 
     public void AddLevelTime(float time)
     {
-        bestTimes.Add(time);
+        bestTime.Add(time);
     }
     public static Gamedata Instance
         { get { return instance; } }    
